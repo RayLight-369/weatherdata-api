@@ -37,7 +37,7 @@ app.post( "/weather", async ( req, res ) => {
 
   try {
 
-    const data = await fetchWeatherData( req.body.lat, req.body.lon );
+    const data = await fetchWeatherData( lat, lon );
 
     if ( data ) res.json( data );
     else res.status( 404 ).send( "location not found" );
