@@ -37,8 +37,6 @@ app.post( "/weather", async ( req, res ) => {
 
   try {
 
-    console.log( lat, lon );
-
     const data = await fetchWeatherData( req.body.lat, req.body.lon );
 
     if ( data ) res.json( data );
