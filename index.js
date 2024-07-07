@@ -27,6 +27,9 @@ function fetchWeatherData ( lat, lon ) {
 }
 
 
+app.get( "/", ( req, res ) => {
+  res.send( "Hello, world!" );
+} );
 
 app.post( "/weather", async ( req, res ) => {
 
